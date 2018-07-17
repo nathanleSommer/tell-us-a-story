@@ -1,0 +1,8 @@
+<div class="editor">
+  <td-text-editor value="{{storyContent}}" [options]="editorOptions" #textEditor></td-text-editor>
+</div>
+
+<form>
+  <input type="text" class="txt" [ngClass]="{'invalid-input-border' : hasNoTag }" name="item" placeholder="#tag" [(ngModel)]="storyTag" autocomplete="off" required>
+  <input type="submit" class="btn" value="Submit" (click)="submitText()">
+</form>
