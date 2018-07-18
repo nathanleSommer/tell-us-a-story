@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { EditorComponent } from './editor/editor.component';
+import { StoryGridComponent } from './story-grid/story-grid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    EditorComponent
+    EditorComponent,
+    StoryGridComponent
   ],
   imports: [
     BrowserModule,

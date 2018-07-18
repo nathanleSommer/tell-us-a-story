@@ -1,27 +1,7 @@
-# TellUsAStory
+# Raconte nous une histoire !
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+"**Raconte nous une histoire**" part d'une idée très simple : On écrit une histoire courte qu'on souhaite raconter aux gens, sur un sujet quelconque. 
+Il peut s'agir d'une histoire personnelle, d'un scénario de film, d'un conte tiré d'un livre ou encore l'histoire d'un jeu vidéo. 
+L'auteur ajoute un tag à son récit et toutes les histoires sont classées sous la forme de listes de thèmes. 
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+*L'histoire n'attend que vous !*
