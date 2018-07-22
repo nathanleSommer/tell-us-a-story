@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { CovalentTextEditorModule } from '@covalent/text-editor';
+import { NgxMdModule } from 'ngx-md';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +23,7 @@ import { StoryGridComponent } from './story-grid/story-grid.component';
     BrowserModule,
     AppRoutingModule,
     CovalentTextEditorModule,
+    NgxMdModule,
     FormsModule,
     BrowserAnimationsModule
   ],
