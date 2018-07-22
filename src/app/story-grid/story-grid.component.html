@@ -1,3 +1,6 @@
-<p>
-  story-grid works!
-</p>
+<div class="container-grid">
+  <div class="color-dark col-grid div-relative" [@storyState]="story.active" (click)="toggleState(i,story)" *ngFor="let story of stories; let i = index;" id="{{i}}" (mouseover)="mouseOverImage(i,story)"> 
+    <img src="{{story.path}}" class="story-img">
+    <div class="absolute title">{{story.title}} - par {{story.author}}</div>
+  </div>
+</div>
