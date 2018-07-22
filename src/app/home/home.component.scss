@@ -3,6 +3,17 @@
     grid-template-columns: 15% auto;
 }
 
+.color-dark{
+    background:linear-gradient(to right,#323776,#3C3E6D) ;
+    opacity: 0.95;
+}
+
+.color-light{
+    background: #7B7EA1;
+    color: black;
+    opacity: 0.95;
+}
+
 .container {
     display: grid;
     //grid-template-columns: repeat(3, auto);
@@ -11,17 +22,6 @@
 
 .col {
     padding: .4em 1.3em;
-}
-
-.color-dark{
-    background: #323776;
-    opacity: 0.95;
-}
-
-.color-light{
-    background: #fff;
-    color: black;
-    opacity: 0.95;
 }
 
 input.txt {

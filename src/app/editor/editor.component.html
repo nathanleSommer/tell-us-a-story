@@ -1,8 +1,13 @@
+<form>
+  <input type="text" class="txt" [ngClass]="{'invalid-input-border' : hasNoTitle }" name="item" placeholder="Titre de l'histoire" [(ngModel)]="storyTitle" autocomplete="off" required>
+
+</form>
+
 <div class="editor">
   <td-text-editor value="{{storyContent}}" [options]="editorOptions" #textEditor></td-text-editor>
 </div>
 
 <form>
-  <input type="text" class="txt" [ngClass]="{'invalid-input-border' : hasNoTag }" name="item" placeholder="#tag" [(ngModel)]="storyTag" autocomplete="off" required>
+  <input type="text" class="txt" [ngClass]="{'invalid-input-border' : hasNoAuthor }" name="item" placeholder="Auteur" [(ngModel)]="storyAuthor" autocomplete="off" required>
   <input type="submit" class="btn" value="Submit" (click)="submitText()">
 </form>
