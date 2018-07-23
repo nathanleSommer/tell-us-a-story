@@ -1,6 +1,5 @@
 <form>
-  <input type="text" class="txt" [ngClass]="{'invalid-input-border' : hasNoTitle }" name="item" placeholder="Titre de l'histoire" [(ngModel)]="storyTitle" autocomplete="off" required>
-
+  <input type="text" class="txt" [ngClass]="{'invalid-input-border' : hasNoTitle }" name="item" placeholder="Titre" [(ngModel)]="storyTitle" autocomplete="off" required>
 </form>
 
 <div class="editor">
@@ -9,5 +8,10 @@
 
 <form>
   <input type="text" class="txt" [ngClass]="{'invalid-input-border' : hasNoAuthor }" name="item" placeholder="Auteur" [(ngModel)]="storyAuthor" autocomplete="off" required>
+</form>
+<form>
+  <input type="text" class="txt" name="item" placeholder="URL de l'image (ex: https://i.imgur.com/tJHWC5o.jpg)" [(ngModel)]="storyImageURL" autocomplete="off">
+</form>
+<form>
   <input type="submit" class="btn" value="Submit" (click)="submitText()">
 </form>
