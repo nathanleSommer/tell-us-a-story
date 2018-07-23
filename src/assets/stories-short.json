@@ -1,0 +1,34 @@
+[  
+    {
+        "path":"assets/images/stories/elements.png",
+        "title":"Magic the gathering : mythes et légendes",
+        "author":"Inso",
+        "content":"content",
+        "active":"inactive",
+        "id":0
+    },
+    {
+        "path":"assets/images/stories/chandra.jpg",
+        "title":"Chandra la pyromane de Kaladesh",
+        "author":"Inso",
+        "content":"content",
+        "active":"inactive",
+        "id":1
+    },
+    {
+        "path":"assets/images/stories/angel.jpg",
+        "title":"Isobel l'ange guerrière",
+        "author":"Inso",
+        "content":"content",
+        "active":"inactive",
+        "id":2
+    },
+    {
+        "path":"https://i.imgur.com/tJHWC5o.jpg",
+        "title":"Kiora, maîtresse des profondeurs",
+        "author":"Inso",
+        "content":"content",
+        "active":"inactive",
+        "id":3
+    }
+]

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { trigger, style, transition, animate, state, keyframes, query, stagger} from '@angular/animations';
+import { trigger, style, transition, animate, state } from '@angular/animations';
 import { Story } from '../story/story';
 import { StoryService } from '../story/story.service';
 
@@ -24,9 +24,6 @@ import { StoryService } from '../story/story.service';
 })
 
 export class StoryGridComponent implements OnInit {
-  title:string;
-  author:string;
-
   stories: Story[];
 
   constructor(private storyService: StoryService) { }
@@ -35,23 +32,16 @@ export class StoryGridComponent implements OnInit {
     this.getStories();
   }
 
-  getMockStories():void {
-    this.storyService.getMockStories()
-    .subscribe(stories => this.stories = stories);
-
-    console.log(this.stories);
-  }
-
   getStories(): void {
     this.storyService.getJSON()
     .subscribe(stories => this.stories = stories);
-    console.log("test");
-    console.log(this.stories);
   }
 
   toggleState(i:number,content:string) {
     for(let s of this.stories) {
+      console.log(s);
       if(s.id != i){
+        console.log(s.id);
         s.active = 'inactive';
         document.getElementById(s.id+"").classList.remove("on-top");
       }

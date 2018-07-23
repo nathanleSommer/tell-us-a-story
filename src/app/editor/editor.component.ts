@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CovalentTextEditorModule } from '@covalent/text-editor';
 import { ViewChild } from '@angular/core';
 
+import { Story } from '../story/story';
+import { StoryService } from '../story/story.service';
+
 @Component({
   selector: 'app-editor',
   templateUrl: './editor.component.html',
@@ -18,12 +21,14 @@ export class EditorComponent implements OnInit {
   storyTitle:string = '';
   hasNoTitle:boolean = false;
 
+  storyImageURL:string = '';
+
   editorOptions: any = {
     placeholder : "C'est ici que commence l'histoire ...",
     spellChecker: false
   };
 
-  constructor() { }
+  constructor(private storyService: StoryService) { }
 
   ngOnInit() {
   }
@@ -36,14 +41,20 @@ export class EditorComponent implements OnInit {
       alert("Titre requis.");
       this.hasNoTitle = true;
     } else {
-      true;
+      
       this.storyContent = this._textEditor["_value"];
-      let JSONStoreStory = "{ \"title\" : \""+this.storyTitle +"\" \"author\": \""+this.storyAuthor+"\",\"content\":\""+this.storyContent+"\"}";
-      console.log(JSONStoreStory);
-      let JSONObject = JSON.parse(JSONStoreStory);
-      console.log(JSONObject);
-
-      //HTTP REQUEST
+      let story = "{"+
+          "\"path\" : \""+this.storyImageURL+"\","+
+          "\"title\" : \""+this.storyTitle +"\","+
+          "\"author\": \""+this.storyAuthor+"\","+
+          "\"content\":\""+this.storyContent+"\","+
+          "\"active\":\"inactive\""+
+        "}";
+      let JSONStory = JSON.parse(story);
+      console.log(JSONStory);
+      //add to service data
+      this.storyService.addStory(JSONStory);
+      alert("Histoire ajoutée !");
     }
   }
 }
