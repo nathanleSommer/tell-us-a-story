@@ -6,12 +6,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { CovalentTextEditorModule } from '@covalent/text-editor';
 import { NgxMdModule } from 'ngx-md';
+import { ToastrModule, ToastContainerModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { EditorComponent } from './editor/editor.component';
 import { StoryGridComponent } from './story-grid/story-grid.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { StoryGridComponent } from './story-grid/story-grid.component';
     NgxMdModule,
     FormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot({ positionClass: 'inline' }),
+    ToastContainerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

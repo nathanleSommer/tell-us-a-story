@@ -3,7 +3,7 @@
         "path":"assets/images/stories/elements.png",
         "title":"Magic the gathering : mythes et légendes",
         "author":"Inso",
-        "content":"content",
+        "content":"Quod cum ita sit, paucae domus studiorum seriis cultibus antea celebratae nunc ludibriis ignaviae torpentis exundant, vocali sonu, perflabili tinnitu fidium resultantes.\ndenique pro philosopho cantor et in locum oratoris doctor artium ludicrarum accitur et bybliothecis sepulcrorum ritu in perpetuum clausis organa fabricantur hydraulica, et lyrae ad speciem carpentorum ingentes tibiaeque et histrionici gestus instrumenta non levia.",
         "active":"inactive",
         "id":0
     },
@@ -11,7 +11,7 @@
         "path":"assets/images/stories/chandra.jpg",
         "title":"Chandra la pyromane de Kaladesh",
         "author":"Inso",
-        "content":"content",
+        "content":"Non ergo erunt homines deliciis diffluentes audiendi, si quando de amicitia, quam nec usu nec ratione habent cognitam, disputabunt.\nNam quis est, pro deorum fidem atque hominum! qui velit, ut neque diligat quemquam nec ipse ab ullo diligatur, circumfluere omnibus copiis atque in omnium rerum abundantia vivere? Haec enim est tyrannorum vita nimirum, in qua nulla fides, nulla caritas, nulla stabilis benevolentiae potest esse fiducia, omnia semper suspecta atque sollicita, nullus locus amicitiae.",
         "active":"inactive",
         "id":1
     },
@@ -19,7 +19,7 @@
         "path":"assets/images/stories/angel.jpg",
         "title":"Isobel l'ange guerrière",
         "author":"Inso",
-        "content":"content",
+        "content":"Et quoniam mirari posse quosdam peregrinos existimo haec lecturos forsitan, si contigerit, quamobrem cum oratio ad ea monstranda deflexerit quae Romae gererentur, nihil praeter seditiones narratur et tabernas et vilitates harum similis alias, summatim causas perstringam nusquam a veritate sponte propria digressurus.",
         "active":"inactive",
         "id":2
     },
@@ -27,7 +27,7 @@
         "path":"https://i.imgur.com/tJHWC5o.jpg",
         "title":"Kiora, maîtresse des profondeurs",
         "author":"Inso",
-        "content":"content",
+        "content":"Iamque lituis cladium concrepantibus internarum non celate ut antea turbidum saeviebat ingenium a veri consideratione detortum et nullo inpositorum vel conpositorum fidem sollemniter inquirente nec discernente a societate noxiorum insontes velut exturbatum e iudiciis fas omne discessit, et causarum legitima silente defensione carnifex rapinarum sequester et obductio capitum et bonorum ubique multatio versabatur per orientales provincias, quas recensere puto nunc oportunum absque Mesopotamia digesta, cum bella Parthica dicerentur, et Aegypto, quam necessario aliud reieci ad tempus.",
         "active":"inactive",
         "id":3
     }

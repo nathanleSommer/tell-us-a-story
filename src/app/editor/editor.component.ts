@@ -5,6 +5,9 @@ import { ViewChild } from '@angular/core';
 import { Story } from '../story/story';
 import { StoryService } from '../story/story.service';
 
+
+import { ToastrService } from 'ngx-toastr';
+
 @Component({
   selector: 'app-editor',
   templateUrl: './editor.component.html',
@@ -28,20 +31,28 @@ export class EditorComponent implements OnInit {
     spellChecker: false
   };
 
-  constructor(private storyService: StoryService) { }
+  constructor(private storyService: StoryService, private toastr: ToastrService) { }
 
   ngOnInit() {
   }
 
   submitText() {
+    this.toastr.clear();
     if(this.storyAuthor == ''){
-      alert("Auteur requis.");
+      this.toastr.error('Auteur requis.');
       this.hasNoAuthor = true;
-    } else if(this.storyTitle == '') {
-      alert("Titre requis.");
+    } else {
+      this.hasNoAuthor = false;
+    }
+    if(this.storyTitle == '') {
+      this.toastr.error('Titre requis.');
       this.hasNoTitle = true;
     } else {
-      
+      this.hasNoTitle = false;
+    }
+
+    if(!this.hasNoAuthor && !this.hasNoTitle) {
+
       this.storyContent = this._textEditor["_value"];
       let story = "{"+
           "\"path\" : \""+this.storyImageURL+"\","+
@@ -54,7 +65,9 @@ export class EditorComponent implements OnInit {
       console.log(JSONStory);
       //add to service data
       this.storyService.addStory(JSONStory);
-      alert("Histoire ajoutée !");
+      this.toastr.clear();
+      //if success
+      this.toastr.success('Histoire ajoutée !');
     }
   }
 }

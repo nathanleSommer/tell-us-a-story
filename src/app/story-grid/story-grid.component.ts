@@ -39,9 +39,7 @@ export class StoryGridComponent implements OnInit {
 
   toggleState(i:number,content:string) {
     for(let s of this.stories) {
-      console.log(s);
       if(s.id != i){
-        console.log(s.id);
         s.active = 'inactive';
         document.getElementById(s.id+"").classList.remove("on-top");
       }
