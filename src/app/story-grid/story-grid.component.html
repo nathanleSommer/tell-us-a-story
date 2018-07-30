@@ -1,6 +1,22 @@
 <div class="container-grid">
-  <div class="color-dark col-grid div-relative" [@storyState]="story.active" (click)="toggleState(i,story)" *ngFor="let story of stories; let i = index;" id="{{i}}" (mouseover)="mouseOverImage(story.id,story.title)"> 
+  <div class="color-dark col-grid div-relative" [@storyState]="story.active" (click)="displayStory(i,story)" 
+      *ngFor="let story of stories; let i = index;" id="{{i}}" 
+      (mouseenter)="mouseEnterImage(story.id)"
+      (mouseleave)="mouseLeaveImage(story.id)"> 
     <img src="{{story.path}}" class="story-img">
     <div class="absolute title">{{story.title}} - par {{story.author}}</div>
+  </div>
+</div>
+
+<!-- The Modal -->
+<div id="story-modal" class="story-modal">
+  <div class="story-modal__content">
+    <div class="story-modal__content--header">
+      <span class="story-modal__close" (click)="closeDisplay()">&times;</span>
+      <h2 id="story-modal-header">Modal Header</h2>
+    </div>
+    <div class="story-modal__content--body">
+      <p id="story-modal-content">Some text.</p>
+    </div>
   </div>
 </div>

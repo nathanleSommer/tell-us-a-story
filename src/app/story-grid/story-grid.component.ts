@@ -37,21 +37,35 @@ export class StoryGridComponent implements OnInit {
     .subscribe(stories => this.stories = stories);
   }
 
-  toggleState(i:number,content:string) {
-    for(let s of this.stories) {
-      if(s.id != i){
-        s.active = 'inactive';
-        document.getElementById(s.id+"").classList.remove("on-top");
+  mouseEnterImage(id:string){
+    this.stories[id].active = 'active';
+    document.getElementById(id).classList.add("on-top");
+  }
+
+  mouseLeaveImage(id:string){
+    this.stories[id].active = 'inactive';
+    document.getElementById(id).classList.remove("on-top");
+  }
+
+  displayStory(id:number,content:string) {
+    document.getElementById(id+"").classList.remove("on-top");
+
+    // Get the modal
+    let modal = document.getElementById('story-modal');
+    modal.style.display = "block";
+
+    document.getElementById('story-modal-header').innerText = this.stories[id].title;
+    document.getElementById('story-modal-content').innerText = this.stories[id].content;
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
       }
-    }
-
-    this.stories[i].active = this.stories[i].active === 'active' ? 'inactive' : 'active';
-    document.getElementById(""+i).classList.add("on-top");
-    console.log(this.stories[i].content);
+    } 
   }
 
-  mouseOverImage(id:string,title:string){
-    console.log("id: "+id+", title: "+title);
+  closeDisplay() {
+    document.getElementById('story-modal').style.display = "none";
   }
-
 }
