@@ -63,13 +63,6 @@
 }
 
 /* Modal Content/Box */
-.story-modal__content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
 
 /* The Close Button */
 .story-modal__close {
@@ -90,15 +83,25 @@
  .story-modal__content--header {
     padding: 2px 16px;
     background: linear-gradient(to right, #434995, #3A5E8D);
+    border-top-left-radius: 4px 4px;
+    border-top-right-radius: 4px 4px;
     color: whitesmoke;
 }
 
 /* Modal Body */
 .story-modal__content--body {
     padding: 3em;
-    opacity: 0.9;
+    padding-left: 5em;
+    padding-right: 5em;
+    border-bottom-left-radius: 4px 4px;
+    border-bottom-right-radius: 4px 4px;
     background: linear-gradient(to right, #003366, #000033);
     color: whitesmoke;
+}
+
+.story-modal__content-text {
+    font-size: 18px;
+    text-align: justify;
 }
 
 /* Modal Content */
@@ -107,7 +110,8 @@
     margin: auto;
     margin-top: 5em;
     padding: 0;
-    border: 1px solid #888;
+    border-radius: 4px;
+    opacity: 0.98;
     width: 80%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     animation-name: animatetop;

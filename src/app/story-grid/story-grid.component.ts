@@ -25,6 +25,7 @@ import { StoryService } from '../story/story.service';
 
 export class StoryGridComponent implements OnInit {
   stories: Story[];
+  storyContent:string;
 
   constructor(private storyService: StoryService) { }
 
@@ -55,7 +56,10 @@ export class StoryGridComponent implements OnInit {
     modal.style.display = "block";
 
     document.getElementById('story-modal-header').innerText = this.stories[id].title;
-    document.getElementById('story-modal-content').innerText = this.stories[id].content;
+    //document.getElementById('story-modal-content').innerText = this.stories[id].content;
+    console.log(document.getElementById('story-modal-content').attributes['data']);
+    //document.getElementById('story-modal-content').attributes['data'] = this.stories[id].content;
+    this.storyContent = this.stories[id].content;
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
